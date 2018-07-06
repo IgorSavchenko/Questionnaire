@@ -8,26 +8,34 @@ $(window).on("load", function(){
 
   //hide hints on input fields
   $('input').on('focus', function() {
-              $(this).siblings('.placeholder').hide();
+              $(this).siblings('.placeholder').addClass("prompt");
             })
             .on('blur', function() {
               if ( !$(this).val() )
-                $(this).siblings('.placeholder').show();
+                $(this).siblings('.placeholder').removeClass("prompt");
             });
+
   //hide hint on select field
   $('select').on('focus', function() {
-                $(this).siblings('.placeholder').hide();
+                $(this).siblings('.placeholder').addClass("prompt");
               })
               .on('blur', function() {
-                if ( !$(this).val() )
-                $(this).siblings('.placeholder').show();
+                if ( $(this).val() == "0" )
+                $(this).siblings('.placeholder').removeClass("prompt");
               });
+
   //hide hint on textarea field
   $('textarea').on('focus', function() {
-                $(this).siblings('.placeholder').hide();
+                $(this).siblings('.placeholder').addClass("prompt");
               })
               .on('blur', function() {
                 if ( !$(this).val() )
-                $(this).siblings('.placeholder').show();
+                $(this).siblings('.placeholder').removeClass("prompt");
               });
+
+  //submit button
+  $(".btn-custom").click( function(event) {
+    // event.preventDefault();
+  })
+
 });

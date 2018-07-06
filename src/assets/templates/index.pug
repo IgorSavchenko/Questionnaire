@@ -28,12 +28,12 @@ html(lang="ru")
             .form-row.justify-content-center
               .col-12.col-sm-10.col-md-8.mb-4
                 label.sr-only(for="name")="ФИО"
-                input.form-control.form-control-lg(type="text" name="name" id="name")
+                input.form-control.form-control-lg(type="text" name="name" id="name" required)
                 span.placeholder="ФИО"
-              .col-12.col-sm-6.col-md-5.mb-4
+              .col-12.col-sm-8.col-md-6.mb-4
                 label.sr-only(for="age")="Год рождения"
                 select.form-control.form-control-lg(name="age" id="age")
-                  option(value="")=""
+                  option.option-custom(value="0" label="")=""
                   option(value="2006")="2006"
                   option(value="2005")="2005"
                   option(value="2004")="2004"
@@ -65,21 +65,21 @@ html(lang="ru")
                 span.placeholder="Год рождения"
               .col-12.col-sm-10.col-md-8.mb-4
                 label.sr-only(for="place")="Место проживания"
-                input.form-control.form-control-lg(type="text" name="place" id="place")
+                input.form-control.form-control-lg(type="text" name="place" id="place" required)
                 span.placeholder="Место проживания"
               .col-12.col-sm-10.col-md-8.mb-4
                 label.sr-only(for="skype")="Skype"
-                input.form-control.form-control-lg(type="text" name="skype" id="skype")
+                input.form-control.form-control-lg(type="text" name="skype" id="skype" required)
                 span.placeholder="Skype"
               .col-12.col-sm-10.col-md-8.mb-4
                 label.sr-only(for="email")="E-mail"
-                input.form-control.form-control-lg(type="email" name="email" id="email")
+                input.form-control.form-control-lg(type="email" name="email" id="email" required)
                 span.placeholder="E-mail"
           #experience.form-group
             .icon
             h2.content__subtitle="Расскажите о своем опыте"
-            .row.justify-content-center
-              .col-auto.col-sm-4
+            .row.justify-content-center.text-left.pl-sm-5.pl-md-0
+              .col-12.col-md-4
                 .custom-control.custom-checkbox
                   input.custom-control-input(type="checkbox" name="skill_1" id="skill_1")
                   label(for="skill_1")="БЭМ/OOCSS"
@@ -89,7 +89,7 @@ html(lang="ru")
                 .custom-control.custom-checkbox
                   input.custom-control-input(type="checkbox" name="skill_3" id="skill_3")
                   label(for="skill_3")="Работаю с SVG"
-              .col-auto.col-sm-4
+              .col-12.col-md-4
                 .custom-control.custom-checkbox
                   input.custom-control-input(type="checkbox" name="skill_4" id="skill_4")
                   label(for="skill_4")="Верстаю семантично"
@@ -99,7 +99,7 @@ html(lang="ru")
                 .custom-control.custom-checkbox
                   input.custom-control-input(type="checkbox" name="skill_6" id="skill_6")
                   label(for="skill_6")="Gulp/GRUNT"
-              .col-auto.col-sm-4
+              .col-12.col-md-4
                 .custom-control.custom-checkbox
                   input.custom-control-input(type="checkbox" name="skill_7" id="skill_7")
                   label(for="skill_7")="Webpack"
@@ -116,9 +116,9 @@ html(lang="ru")
             .row.justify-content-center
               .col-12.col-sm-10.col-md-8.mb-3
                 label.sr-only(for="textarea")="Понравилась тем, что..."
-                textarea.form-control.form-control-lg(name="textarea" rows="10" cols="30" id="textarea")
+                textarea.form-control.form-control-lg(name="textarea" rows="10" cols="30" id="textarea" required)
                 span.placeholder="Понравилась тем, что..."
-          button.btn.btn-primary.btn-lg(type="submit")="Готово"
+          button.btn.btn-primary.btn-custom(type="submit")="Готово"
     //- scripts
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="assets/js/main.min.js")

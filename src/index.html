@@ -27,12 +27,12 @@
             <div class="form-row justify-content-center">
               <div class="col-12 col-sm-10 col-md-8 mb-4">
                 <label class="sr-only" for="name">ФИО</label>
-                <input class="form-control form-control-lg" type="text" name="name" id="name"><span class="placeholder">ФИО</span>
+                <input class="form-control form-control-lg" type="text" name="name" id="name" required><span class="placeholder">ФИО</span>
               </div>
-              <div class="col-12 col-sm-6 col-md-5 mb-4">
+              <div class="col-12 col-sm-8 col-md-6 mb-4">
                 <label class="sr-only" for="age">Год рождения</label>
                 <select class="form-control form-control-lg" name="age" id="age">
-                  <option value=""></option>
+                  <option class="option-custom" value="0" label=""></option>
                   <option value="2006">2006</option>
                   <option value="2005">2005</option>
                   <option value="2004">2004</option>
@@ -65,23 +65,23 @@
               </div>
               <div class="col-12 col-sm-10 col-md-8 mb-4">
                 <label class="sr-only" for="place">Место проживания</label>
-                <input class="form-control form-control-lg" type="text" name="place" id="place"><span class="placeholder">Место проживания</span>
+                <input class="form-control form-control-lg" type="text" name="place" id="place" required><span class="placeholder">Место проживания</span>
               </div>
               <div class="col-12 col-sm-10 col-md-8 mb-4">
                 <label class="sr-only" for="skype">Skype</label>
-                <input class="form-control form-control-lg" type="text" name="skype" id="skype"><span class="placeholder">Skype</span>
+                <input class="form-control form-control-lg" type="text" name="skype" id="skype" required><span class="placeholder">Skype</span>
               </div>
               <div class="col-12 col-sm-10 col-md-8 mb-4">
                 <label class="sr-only" for="email">E-mail</label>
-                <input class="form-control form-control-lg" type="email" name="email" id="email"><span class="placeholder">E-mail</span>
+                <input class="form-control form-control-lg" type="email" name="email" id="email" required><span class="placeholder">E-mail</span>
               </div>
             </div>
           </div>
           <div class="form-group" id="experience">
             <div class="icon"></div>
             <h2 class="content__subtitle">Расскажите о своем опыте</h2>
-            <div class="row justify-content-center">
-              <div class="col-auto col-sm-4">
+            <div class="row justify-content-center text-left pl-sm-5 pl-md-0">
+              <div class="col-12 col-md-4">
                 <div class="custom-control custom-checkbox">
                   <input class="custom-control-input" type="checkbox" name="skill_1" id="skill_1">
                   <label for="skill_1">БЭМ/OOCSS</label>
@@ -95,7 +95,7 @@
                   <label for="skill_3">Работаю с SVG</label>
                 </div>
               </div>
-              <div class="col-auto col-sm-4">
+              <div class="col-12 col-md-4">
                 <div class="custom-control custom-checkbox">
                   <input class="custom-control-input" type="checkbox" name="skill_4" id="skill_4">
                   <label for="skill_4">Верстаю семантично</label>
@@ -109,7 +109,7 @@
                   <label for="skill_6">Gulp/GRUNT</label>
                 </div>
               </div>
-              <div class="col-auto col-sm-4">
+              <div class="col-12 col-md-4">
                 <div class="custom-control custom-checkbox">
                   <input class="custom-control-input" type="checkbox" name="skill_7" id="skill_7">
                   <label for="skill_7">Webpack</label>
@@ -132,11 +132,11 @@
             <div class="row justify-content-center">
               <div class="col-12 col-sm-10 col-md-8 mb-3">
                 <label class="sr-only" for="textarea">Понравилась тем, что...</label>
-                <textarea class="form-control form-control-lg" name="textarea" rows="10" cols="30" id="textarea"></textarea><span class="placeholder">Понравилась тем, что...</span>
+                <textarea class="form-control form-control-lg" name="textarea" rows="10" cols="30" id="textarea" required></textarea><span class="placeholder">Понравилась тем, что...</span>
               </div>
             </div>
           </div>
-          <button class="btn btn-primary btn-lg" type="submit">Готово</button>
+          <button class="btn btn-primary btn-custom" type="submit">Готово</button>
         </form>
       </div>
     </main>

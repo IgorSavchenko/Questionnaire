@@ -3,19 +3,9 @@ $grey: #494949;
 $dark-grey: #1c1c1c;
 $light-grey: #c8c8c8;
 $custom-blue: #637ab4;
+$light-blue: #e9efff;
 $dark-blue: #435993;
 $font-Roboto: 'Roboto', sans-serif;
-//mixins
-// @mixin resetLinkStyles {
-//   text-decoration: none;
-//   color: $color-text;
-//   font-size: 16px;
-// }
-// @mixin resetListStyles {
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-// }
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 //helpers
@@ -28,21 +18,14 @@ $font-Roboto: 'Roboto', sans-serif;
 @import "blocks/nav";
 //common styles
 * {
-  // box-sizing: border-box;
-}
-h1, h2, h3, h4, h5, h6, p {
-  // margin: 0;
+  box-sizing: border-box;
 }
 body {
-  // margin: 0 auto;
   font-family: $font-Roboto;
   font-weight: 300;
   color: $dark-grey;
-  // font-size: 16px;
-  // line-height: 1;
 }
 .container {
-  max-width: 1170px;
+  max-width: 770px;
   position: relative;
-  // margin: 0 auto;
 }
