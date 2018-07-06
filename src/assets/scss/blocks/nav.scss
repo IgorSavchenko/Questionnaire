@@ -1,0 +1,10 @@
+.nav {
+  &-link {
+    color: $grey;
+    transition: color 0.2s;
+    &:hover,
+    &.active {
+      color: $custom-blue;
+    }
+  }
+}

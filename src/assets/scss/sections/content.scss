@@ -1,0 +1,79 @@
+.content {
+  position: relative;
+  background-image: url("../img/bgd.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-bottom: 450px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba($white,1) 0, rgba($white,1) 90%, rgba($white,0) 100%);
+  }
+  &__title {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    font-weight: 100;
+    font-size: 4.3725rem;//69,96px
+    color: $black;
+  }
+  &__subtitle {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-weight: 300;
+    font-size: 1.87375rem;//29,98px
+  }
+  &__text {
+    max-width: 500px;
+    margin: -50px auto 40px;
+  }
+  .icon {
+    display: inline-block;
+    // transform: translate3d(-50%, 50%, 0);
+  }
+  input, select, textarea {
+    color: $dark-blue;
+  }
+  .placeholder {
+    color: $light-grey;
+    font-size: 1.5rem;//24px
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: all 0.2s;
+    pointer-events: none;
+  }
+  textarea + .placeholder {
+    top: 10px;
+    left: 45px;
+    transform: translate3d(0, 0, 0);
+    font-size: 1.25rem;//20px
+  }
+}
+
+
+#personal {
+  .icon {
+      // will set the svg as background-image and width/height
+      @include inline-svg($personal_icon);
+  }
+}
+#experience {
+  .icon {
+      // will set the svg as background-image and width/height
+      @include inline-svg($experience_icon);
+  }
+}
+#about {
+  .icon {
+      // will set the svg as background-image and width/height
+      @include inline-svg($about_icon);
+  }
+}

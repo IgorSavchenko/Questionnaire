@@ -1,0 +1,124 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="stylesheet" href="assets/css/main.min.css")
+    title="Questionnaire"
+  body
+    //- header
+    .header
+      nav.mt-4
+        ul.nav.row.justify-content-center
+          li.nav-item.mr-sm-5
+            a.nav-link.active.pr-0(href="#personal")="Личная информация"
+          li.nav-item.mr-sm-5
+            a.nav-link.pr-0(href="#experience")="Опыт"
+          li.nav-item
+            a.nav-link(href="#about")="О себе"
+      hr.mb-0
+    //- main content
+    main.content
+      .container.text-center
+        h1.content__title="Анкета"
+        form.content__form.needs-validation(action="index.html" method="post")
+          #personal.form-group
+            .icon
+            h2.content__subtitle="Личная информация"
+            .form-row.justify-content-center
+              .col-12.col-sm-10.col-md-8.mb-4
+                label.sr-only(for="name")="ФИО"
+                input.form-control.form-control-lg(type="text" name="name" id="name")
+                span.placeholder="ФИО"
+              .col-12.col-sm-6.col-md-5.mb-4
+                label.sr-only(for="age")="Год рождения"
+                select.form-control.form-control-lg(name="age" id="age")
+                  option(value="")=""
+                  option(value="2006")="2006"
+                  option(value="2005")="2005"
+                  option(value="2004")="2004"
+                  option(value="2003")="2003"
+                  option(value="2002")="2002"
+                  option(value="2001")="2001"
+                  option(value="2000")="2000"
+                  option(value="1999")="1999"
+                  option(value="1998")="1998"
+                  option(value="1997")="1997"
+                  option(value="1996")="1996"
+                  option(value="1995")="1995"
+                  option(value="1994")="1994"
+                  option(value="1993")="1993"
+                  option(value="1992")="1992"
+                  option(value="1991")="1991"
+                  option(value="1990")="1990"
+                  option(value="1989")="1989"
+                  option(value="1988")="1988"
+                  option(value="1987")="1987"
+                  option(value="1986")="1986"
+                  option(value="1985")="1985"
+                  option(value="1984")="1984"
+                  option(value="1983")="1983"
+                  option(value="1982")="1982"
+                  option(value="1981")="1981"
+                  option(value="1980")="1980"
+                  option(value="1979")="1979"
+                span.placeholder="Год рождения"
+              .col-12.col-sm-10.col-md-8.mb-4
+                label.sr-only(for="place")="Место проживания"
+                input.form-control.form-control-lg(type="text" name="place" id="place")
+                span.placeholder="Место проживания"
+              .col-12.col-sm-10.col-md-8.mb-4
+                label.sr-only(for="skype")="Skype"
+                input.form-control.form-control-lg(type="text" name="skype" id="skype")
+                span.placeholder="Skype"
+              .col-12.col-sm-10.col-md-8.mb-4
+                label.sr-only(for="email")="E-mail"
+                input.form-control.form-control-lg(type="email" name="email" id="email")
+                span.placeholder="E-mail"
+          #experience.form-group
+            .icon
+            h2.content__subtitle="Расскажите о своем опыте"
+            .row.justify-content-center
+              .col-auto.col-sm-4
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_1" id="skill_1")
+                  label(for="skill_1")="БЭМ/OOCSS"
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_2" id="skill_2")
+                  label(for="skill_2")="Stylus/LESS/SASS"
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_3" id="skill_3")
+                  label(for="skill_3")="Работаю с SVG"
+              .col-auto.col-sm-4
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_4" id="skill_4")
+                  label(for="skill_4")="Верстаю семантично"
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_5" id="skill_5")
+                  label(for="skill_5")="ES2015/ES2016"
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_6" id="skill_6")
+                  label(for="skill_6")="Gulp/GRUNT"
+              .col-auto.col-sm-4
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_7" id="skill_7")
+                  label(for="skill_7")="Webpack"
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_8" id="skill_8")
+                  label(for="skill_8")="jQuery"
+                .custom-control.custom-checkbox
+                  input.custom-control-input(type="checkbox" name="skill_9" id="skill_9")
+                  label(for="skill_9")="Ипользую Git"
+          #about.form-group
+            .icon
+            h2.content__subtitle="Расскажите о себе"
+            p.content__text="Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас."
+            .row.justify-content-center
+              .col-12.col-sm-10.col-md-8.mb-3
+                label.sr-only(for="textarea")="Понравилась тем, что..."
+                textarea.form-control.form-control-lg(name="textarea" rows="10" cols="30" id="textarea")
+                span.placeholder="Понравилась тем, что..."
+          button.btn.btn-primary.btn-lg(type="submit")="Готово"
+    //- scripts
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="assets/js/main.min.js")
